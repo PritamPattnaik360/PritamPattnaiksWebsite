@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pritam Pattnaik - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #e6ccb3;
+      color: #333;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      position: relative;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+    .project {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: #e6ccb3;
+      color: #333;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .toggle-btn {
+      background-color: bisque;
+      color: #000000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      margin-right: 10px;
+    }
+
+    .toggle-btn:last-child {
+      margin-right: 0;
+    }
+
+    .profile-picture {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: 2px solid burlywood; 
+    }
+
+    .contact-me {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .contact-me a {
+      display: inline-block;
+      margin: 10px;
+      color: #2696ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Pritam Pattnaik</h1>
+  </header>
+
+  <main>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+
+    <div class="toggle-btn-container">
+      <button class="toggle-btn" id="aboutToggle">About Me</button>
+      <button class="toggle-btn" id="educationToggle">Education</button>
+      <button class="toggle-btn" id="projectsToggle">Projects</button>
+      <button class="toggle-btn" id="funstuffToggle">When is it Friday?</button>
+    </div>
+
+    <section id="home" class="section">
+      <h2>Welcome to My Website</h2>
+      <p>Hi, I'm Pritam, a passionate web developer.</p>
+      <p>Scroll down after clicking the buttons your intrested!</p>
+    </section>
+
+    <section id="about" class="section hidden">
+      <h2>About Me</h2>
+      <p>I am a dedicated web developer with expertise in HTML, CSS, and JavaScript. I love creating responsive and user-friendly websites.</p>
+    </section>
+
+    <section id="education" class="section hidden">
+      <h2>Education</h2>
+      <p>I am a Computer Science Major.</p>
+    </section>
+
+    <section id="projects" class="section hidden">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Description of Project 1</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>Description of Project 3</p>
+      </div>
+    </section>
+
+    <section id="funstuff" class="section hidden">
+      <H2 id="change"></H3>
+      <p id="change2"></p>
+    </section>
+  
+
+    <section class="section contact-me">
+      <h2>Contact Me</h2>
+      <div>
+        <a href="mailto:pritampattnaik360@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/pritam-pattnaik-doinbetter2789">LinkedIn</a>
+        <a href="https://github.com/PritamPattnaik360">Github</a>
+        <a href="https://instagram.com/pritam.pritzy?igshid=MTNiYzNiMzkwZA%3D%3D&utm_source=qr">Instagram</a>
+      </div>
+    </section>
+    <section class="section space" style="padding: 20px;">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Pritam Pattnaik</p>
+  </footer>
+
+  <script>
+    const aboutToggleBtn = document.getElementById('aboutToggle');
+    const projectsToggleBtn = document.getElementById('projectsToggle');
+    const educationToggleBtn = document.getElementById('educationToggle');
+    const funstuffToggleBtn = document.getElementById('funstuffToggle');
+    const aboutSection = document.getElementById('about');
+    const projectsSection = document.getElementById('projects');
+    const educationSection = document.getElementById('education');
+    const funstuffSection = document.getElementById('funstuff');
+
+    aboutToggleBtn.addEventListener('click', () => {
+      aboutSection.classList.toggle('hidden');
+    });
+
+    projectsToggleBtn.addEventListener('click', () => {
+      projectsSection.classList.toggle('hidden');
+    });
+
+    educationToggleBtn.addEventListener('click', () => {
+      educationSection.classList.toggle('hidden');
+    });
+
+    funstuffToggleBtn.addEventListener('click', () => {
+      funstuffSection.classList.toggle('hidden');
+    });
+
+    const greeting = getGreeting();
+    const day = new Date().getDay();
+
+    document.getElementById("change").innerHTML = greeting;
+    if(day == 0){
+        document.getElementById("change2").innerHTML = "Tommorrows monday🥱";
+    }else if(day == 1){
+        document.getElementById("change2").innerHTML = "4 more days till Friday😤";
+    }else if(day == 2){
+        document.getElementById("change2").innerHTML = "3 more days till Friday😪";
+    }else if(day == 3){
+        document.getElementById("change2").innerHTML = "2 more days till Friday😐";
+    }else if(day == 4){
+        document.getElementById("change2").innerHTML = "1 more days till Friday😆";
+    }else if(day == 5){
+        document.getElementById("change2").innerHTML = "Its Friday!!!😄";
+    }else if(day == 6){
+        document.getElementById("change2").innerHTML = "Weekend just started!😍";
+    }
+
+    function getGreeting() {
+            const time = new Date().getHours();
+            let greeting;
+            if (time < 10) {
+                greeting = "Good morning ";
+            } else if (time < 20) {
+                greeting = "Good afternoon ";
+            } else {
+                greeting = "Good evening ";
+            }
+            return greeting;
+        }
+
+
+  </script>
+</body>
+
+</html>
