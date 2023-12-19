@@ -46,6 +46,13 @@
       border-radius: 6px;
     }
 
+    .exp {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
     footer {
       background-color: #e6ccb3;
       color: #333;
@@ -109,6 +116,7 @@
 
     <div class="toggle-btn-container">
       <button class="toggle-btn" id="aboutToggle">About Me</button>
+      <button class="toggle-btn" id="expToggle">Experience</button>
       <button class="toggle-btn" id="educationToggle">Education</button>
       <button class="toggle-btn" id="projectsToggle">Projects</button>
       <button class="toggle-btn" id="funstuffToggle">When is it Friday?</button>
@@ -116,18 +124,37 @@
 
     <section id="home" class="section">
       <h2 style="font-family: 'Roboto', sans-serif;">Welcome to My Website</h2>
-      <p>Hi, I'm Pritam, a passionate web developer.</p>
-      <p>Scroll down after clicking the buttons your intrested!</p>
+      <p>Hi, I'm Pritam, a Software developer. Currently keeping myself busy by making intresting cs projects like this website!
+        Im especially intrested in back end software development, cybersecurity and neural Networks/Deep learning. 
+      </p>
+      <p>Scroll down after clicking the buttons your intrested in!</p>
     </section>
 
     <section id="about" class="section hidden">
       <h2 style="font-family: 'Roboto', sans-serif;">About Me</h2>
-      <p>I am a dedicated web developer with expertise in HTML, CSS, and JavaScript. I love creating responsive and user-friendly websites.</p>
+      <p>Im a software developer that has experience in Java, Python, C++. 
+        
+      </p>
     </section>
+
+    <section id="experience" class="section hidden">
+        <h2 style="font-family: 'Roboto', sans-serif;">Experience</h2>
+        <div class="exp">
+          <h3>01ByteSoft : </h3>
+          <p>intership - Contract</p>
+          <p>Initially an internship that led to a contract role. I developed</p>
+        </div> 
+        <div class="exp">
+            <h3>Code Ninjas Sensei : </h3>
+            <p>Part Time Tutor </p>
+            <p>Initially an internship that led to a contract role. I developed</p>
+          </div> 
+      </section>
 
     <section id="education" class="section hidden">
       <h2 style="font-family: 'Roboto', sans-serif;">Education</h2>
-      <p>I am a Computer Science Major.</p>
+      <p>I am a Computer Science Major @TCNJ. My coursework includes the following:</p>
+      <p>Intro to CS, Fundementals of CS, Calc 1, Physics 1</p>
     </section>
 
     <section id="projects" class="section hidden">
@@ -147,11 +174,8 @@
     </section>
 
     <section id="funstuff" class="section hidden">
-      <H2 id="change"></H3>
+      <H2 id="change"></H2>
       <p id="change2"></p>
-    </section>
-
-    <section id="games" class="section hidden">
     </section>
   
 
@@ -174,16 +198,22 @@
 
   <script>
     const aboutToggleBtn = document.getElementById('aboutToggle');
+    const expToggleBtn = document.getElementById('expToggle');
     const projectsToggleBtn = document.getElementById('projectsToggle');
     const educationToggleBtn = document.getElementById('educationToggle');
     const funstuffToggleBtn = document.getElementById('funstuffToggle');
     const aboutSection = document.getElementById('about');
+    const expSection = document.getElementById('experience');
     const projectsSection = document.getElementById('projects');
     const educationSection = document.getElementById('education');
     const funstuffSection = document.getElementById('funstuff');
 
     aboutToggleBtn.addEventListener('click', () => {
       aboutSection.classList.toggle('hidden');
+    });
+
+    expToggleBtn.addEventListener('click', () => {
+      expSection.classList.toggle('hidden');
     });
 
     projectsToggleBtn.addEventListener('click', () => {
