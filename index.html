@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +13,13 @@
       font-family: 'VT323', monospace;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f0;
-      color: #333;
+      background-color: #000;
+      color: #fff;
     }
 
     header {
-      background-color: #e6ccb3;
-      color: #333;
+      background-color: #333;
+      color: #fff;
       padding: 1em 0;
       text-align: center;
     }
@@ -32,30 +31,30 @@
 
     .section {
       margin-bottom: 30px;
-      background-color: #fff;
+      background-color: #1a1a1a;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
       margin-top: 10px;
     }
 
     .project {
-      background-color: #f9f9f9;
+      background-color: #2a2a2a;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 6px;
     }
 
     .exp {
-      background-color: #f9f9f9;
+      background-color: #2a2a2a;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 6px;
     }
 
     footer {
-      background-color: #e6ccb3;
-      color: #333;
+      background-color: #333;
+      color: #fff;
       text-align: center;
       padding: 10px 0;
       position: fixed;
@@ -68,8 +67,8 @@
     }
 
     .toggle-btn {
-      background-color: bisque;
-      color: #000000;
+      background-color: #444;
+      color: #fff;
       border: none;
       padding: 8px 16px;
       border-radius: 5px;
@@ -89,7 +88,7 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      border: 2px solid burlywood; 
+      border: 2px solid #666; 
     }
 
     .contact-me {
@@ -102,6 +101,9 @@
       margin: 10px;
       color: #2696ff;
       text-decoration: none;
+    }
+    .no-style-link {
+      color: inherit; 
     }
   </style>
 </head>
@@ -163,13 +165,50 @@
 
     <section id="projects" class="section hidden">
       <h2 style="font-family: 'Roboto', sans-serif;">Projects</h2>
+        <div class="project">
+            
+        <h3><a href="https://github.com/PritamPattnaik360/JobFinder" target="_blank" class="no-style-link">JobFinder</a></h3>
+            <p>A Python-based job search application that includes:
+              <ul>
+                <li>Web scraping for job listings</li>
+                <li>Filtering and sorting by job criteria</li>
+                <li>Automated application submission</li>
+              </ul>
+            </p>
+          </div>
+          <div class="project">
+            <h3><a href="https://github.com/PritamPattnaik360/CamReader" target="_blank" class="no-style-link">CamReader</a></h3>
+            <p>A Python project to read text using a camera:
+              <ul>
+                <li>Real-time text recognition</li>
+                <li>Supports multiple languages</li>
+                <li>Export recognized text to various formats</li>
+              </ul>
+            </p>
+          </div>
+          <div class="project">
+            <h3><a href="https://github.com/PritamPattnaik360/KalmanFilter" target="_blank" class="no-style-link">KalmanFilter</a></h3>
+            <p>Implementation of Kalman Filter in Python for tracking purposes:
+              <ul>
+                <li>Predictive modeling and estimation</li>
+                <li>Application in robotics and navigation</li>
+                <li>Simulation and real-world data integration</li>
+              </ul>
+            </p>
+          </div>
+          <div class="project">
+            <h3><a href="https://github.com/PritamPattnaik360/GPSapp" target="_blank" class="no-style-link">GPS App</a></h3>
+            <p>A Java-based GPS application with features like:
+              <ul>
+                <li>Real-time location tracking</li>
+                <li>Distance calculation in meters</li>
+                <li>Dark mode and power save mode</li>
+                <li>Logging previous locations and time spent</li>
+              </ul>
+            </p>
+        </div>
       <div class="project">
-        <h3>GPS app</h3>
-        <p>Built in java using android studios is a GPS app that tracks your location that has a dark mode feature and power save mode. Displays distance moved in meters, 
-            longitude and latitude, previous locations with time spent there, current location address</p>
-      </div>
-      <div class="project">
-        <h3>Tic-Tac-Toe app</h3>
+        <h3><a href="https://github.com/PritamPattnaik360/Tic-Tac-Toe" target="_blank" class="no-style-link">Tic-Tac-Toe app</a></h3>
         <p>Built in java using android studios is a simple Tic-Tac-Toe game for 2 players</p>
       </div>
       <h4>To learn more check out my github by scrolling down to the Contact Me section</h4>
